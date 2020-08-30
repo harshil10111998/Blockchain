@@ -1,0 +1,33 @@
+ 2cde52639d1cf12665d7766ba3985d41d506522e
+ 
+ pragma solidity 0.4.22 <= 0.6.12;
+    
+    contract AnualReportCard{
+        int seat_number;
+        string name;
+        string subject_1;
+        int subject_1_marks;
+        string subject_2;
+        int subject_2_marks;
+        string annual_year;
+        int percentage;
+            
+        function AnualReportCard(int newSeat_number, string newName, string newSubject_1, int newSubject_1_marks, string newSubject_2, 
+        int newSubject_2_marks, string newAnnual_year, int newPercentage) public{
+            seat_number = newSeat_number;
+            name = newName;
+            subject_1 = newSubject_1;
+            subject_1_marks = newSubject_1_marks;
+            subject_2 = newSubject_2;
+            subject_2_marks = newSubject_2_marks;
+            annual_year = newAnnual_year;
+            percentage = newPercentage;
+            
+            
+        }
+    
+    
+    function getAnualReportCard() public view returns(int, string, string, int, string, int, string, int){
+        return (seat_number, name, subject_1, subject_1_marks, subject_2, subject_2_marks, annual_year, percentage);
+    }
+    }
